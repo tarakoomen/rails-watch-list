@@ -8,6 +8,7 @@ class BookmarksController < ApplicationController
     @list = List.find(params[:list_id])
     @bookmark = Bookmark.new(bookmark_params)
     @bookmark.list_id = @list.id
+    @bookmark.movie.poster_url = "https://picsum.photos/200/300"
     if @bookmark.save
       redirect_to root_path(@list)
     else
