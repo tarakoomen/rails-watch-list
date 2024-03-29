@@ -14,7 +14,7 @@
     <% @lists.each do |list| %>
       <div class="co-12 col-sm-6 col-md-4 mb-3">
         <%= link_to list_path(list), class:"text-decoration-none" do %>
-          <div class="card-category">
+          <div class="card-category" data-aos="zoom-in" cl_image_tag @list.image.key, height: 300, width: 400, crop: :fill %>
             <%= list.name %>
           </div>
         <% end %>
@@ -22,6 +22,7 @@
     <% end %>
   </div>
 </div>
+
 
 
 <%# <div class="container">
